@@ -1,3 +1,6 @@
+theme: sql-learing
+title: Welcome to GaoYL's homepage!
+description: mark down the nots and recods of sql
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/Chris-ylGao/sql-learning.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
