@@ -5,7 +5,7 @@
 ```ruby
 CREATE TABLE tableName(
 ```
-    *//a list of parameters of each column, including name and datatype, eg: id INTEGER, name TEXT*
+    //a list of parameters of each column, including name and datatype, eg: id INTEGER, name TEXT
 ```ruby
 columnName1 DATATYPE1,
 columnName2 DATATYPE2,
@@ -18,13 +18,13 @@ columnName2 DATATYPE2,
 INSERT INTO tableName(columnName1, columnName2, ...)
 VALUES(value1, value2, ...);
 ```
-*// if the cloumn's datatype is TEXT, then value should be ''*
+    // if the cloumn's datatype is TEXT, then value should be ''
 # 3. Fetch data from a table
-*// fetch data of a cloumn in table*
+    // fetch data of a cloumn in table
 ```ruby
 SELECT columnName FROM tableName; 
 ```
-*// fetch all data in table*
+    // fetch all data in table
 ```ruby
 SELECT * FROM tableName;
 ```
@@ -39,5 +39,5 @@ UPDATE tableName
 SET updateColumn = newValue
 WHERE column = value;
 ```
-*// WHERE is to locate the row*
+    // WHERE is to locate the row*
 # 6. 
