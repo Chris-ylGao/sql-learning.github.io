@@ -1,7 +1,7 @@
 ## Theme: sql-learing
 ## description: mark down the nots and recods of sql
 
-1. 
+1. Create a table
 '''
 CREATE TABLE tableName(
 
@@ -9,7 +9,9 @@ CREATE TABLE tableName(
 
 columnName1 dataType1 **(all in Upper case)** ,
 
-columnName2 dataType2
+columnName2 dataType2,
+
+......
 
 );
 
