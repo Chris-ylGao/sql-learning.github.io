@@ -2,14 +2,14 @@
 ## description: mark down the nots and recods of sql
 
 # 1. Create a table
-```
+```ruby
 CREATE TABLE tableName(
 
-_//a list of parameters of each column, including name and datatype, eg: id INTEGER, name TEXT_
+//a list of parameters of each column, including name and datatype, eg: id INTEGER, name TEXT
 
-columnName1 dataType1 **(all in Upper case)** ,
+columnName1 DATATYPE1 (all in upper case),
 
-columnName2 dataType2,
+columnName2 DATATYPE2,
 
 ......
 
