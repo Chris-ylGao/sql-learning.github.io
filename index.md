@@ -5,7 +5,7 @@
 ```ruby
 CREATE TABLE tableName(
 ```
-*//a list of parameters of each column, including name and datatype, eg: id INTEGER, name TEXT*
+    *//a list of parameters of each column, including name and datatype, eg: id INTEGER, name TEXT*
 ```ruby
 columnName1 DATATYPE1,
 columnName2 DATATYPE2,
