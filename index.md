@@ -4,14 +4,38 @@
 # 1. Create a table
 ```ruby
 CREATE TABLE tableName(
+
 //a list of parameters of each column, including name and datatype, eg: id INTEGER, name TEXT
 
-columnName1 DATATYPE1 (all in upper case),
-
+columnName1 DATATYPE1,
 columnName2 DATATYPE2,
-
 ......
-
 );
 
+```
+# 2. Insert a new row into a table
+```ruby
+// if the datatype is TEXT, then value should be ''
+INSERT INTO tableName(columnName1, columnName2, ...)
+VALUES(value1, value2, ...);
+```
+# 3. Fetch data from a table
+```ruby
+// fetch data of a cloumn in table
+SELECT columnName FROM tableName; 
+
+// fetch all data in table
+SELECT * FROM tableName;
+```
+# 4. Add a new column to a table
+```ruby
+ALERT TABLE tableNmae
+ADD COLUMN newColumnName DATATYPE;
+```
+# 5. Edit a row in a table
+```ruby
+UPDATE tableName
+SET updateColumn = newValue
+WHERE column = value;
+// WHERE is to locate the row
 ```
