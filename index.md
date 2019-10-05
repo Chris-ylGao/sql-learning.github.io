@@ -6,7 +6,8 @@
 ```ruby
 CREATE TABLE tableName(
 ```
-    //a list of parameters of each column, including name and datatype, eg: id INTEGER, name TEXT
+    // A list of parameters of each column, including name and datatype, eg: id INTEGER, name TEXT
+    // For 'DATE' datatype, the format is 'YYYY-MM-DD'
 ```ruby
 columnName1 DATATYPE1,
 columnName2 DATATYPE2,
@@ -46,8 +47,8 @@ SELECT * FROM tableName;
 ```
 ## 1.4 Add a new column to a table
 ```ruby
-ALERT TABLE tableNmae
-ADD COLUMN newColumnName DATATYPE;
+ALTER TABLE tableNmae
+ADD newColumnName DATATYPE;
 ```
 ## 1.5 Edit a row in a table
 ```ruby
@@ -61,3 +62,4 @@ WHERE column = value;
 DELETE FROM tableName
 WHERE column IS value;
 ```
+[]
