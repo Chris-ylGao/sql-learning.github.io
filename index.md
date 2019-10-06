@@ -216,4 +216,47 @@ HAVING
 ORDER BY
 LIMIT;
 ```
-[]
+# 3.Mutipile tables
+## 3.1 Combine tables
+### 3.1.1 INNER JOIN
+    //Add column of table1 to table2, accoring to "condition".
+    // columnNamr = *, if you want to add all table1 to table2
+    // can also use "WHERE" statement to set condition of table
+```ruby
+SELECT columnName FROM tableName1
+JOIN tableName2
+ON condition;
+```
+### 3.1.2 LEFT JOIN
+    //reserve all rows in the table1, and add table2 according to "condition"
+```ruby
+SELECT columnName FROM tableName1
+LEFT JOIN tableName2
+ON condition;
+```
+### 3.1.3 CROSS JOIN
+    //combine all rows from table1 and all rows from table2
+    //CROSS JOIN without ON condition
+```ruby
+SELECT columnName FROM tableName1
+CROSS JOIN tableName2
+```
+### 3.1.4 UNION
+    //stack table1 on the top of table2
+    ```ruby
+    SELECT * FROM tableName1
+    UNION
+    SELECT * FROM tableName2;
+    ```
+## 3.2 WITH
+    //create a temporary table
+```ruby
+WITH temporaryTableName AS(
+....
+)
+SELECT ...
+FROM temperaryTableName
+......;
+```
+
+[x]
