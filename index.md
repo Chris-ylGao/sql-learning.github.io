@@ -36,7 +36,12 @@ columnName4 DATATYPE4 NOT NULL
 INSERT INTO tableName(columnName1, columnName2, ...)
 VALUES(value1, value2, ...);
 ```
-## 1.3 Fetch data from a table
+## 1.3 Add a new column to a table
+```ruby
+ALTER TABLE tableNmae
+ADD newColumnName DATATYPE;
+```
+## 1.4 Fetch data from a table
     // fetch data of a cloumn in table
 ```ruby
 SELECT columnName FROM tableName; 
@@ -45,19 +50,104 @@ SELECT columnName FROM tableName;
 ```ruby
 SELECT * FROM tableName;
 ```
-## 1.4 Add a new column to a table
+### 1.4.1 SELECT statement
+#### 1.4.1.1 AS
+```ruby
+SELECT columnName AS 'newColumnName'
+FROM tableName;
+```
+    // rename column as "newColumnName"
+#### 1.4.1.2 DISTINCT
+```ruby
+SELECT DISTINCT columnName FROM tableName;
+```
+    // filter the duplicate values of this column.
+#### 1.4.1.3 WHERE
+```ruby
+SELECT columnName FROM tableName
+WHERE condition;
+```
+    // Basic condition symbol
+       =: equal to
+      !=: not equal to
+       >: greater than
+      >=: greater than or equal to
+       <: less than
+      <=: less than or equal to 
+#### 1.4.1.4 LIKE
+```ruby
+SELECT columnName FROM tableName
+WHERE columnName LIKE 'specialPattern';
+```
+    //Fetch values with similar pattern;
+       _:  can be substituted any individual character
+      A%: begin with A
+      %a: end with a
+    %ab%: contains ab
+#### 1.4.1.5 IS NULL/IS NOT NULL
+```ruby
+SELECT columnName FROM tableName
+WHERE columnName IS NULL;
+```
+```ruby
+SELECT columnName FROM tableName
+WHERE columnName IS NOT NULL;
+```
+#### 1.4.1.6 BETWEEN
+```ruby
+SELECT columnName FROM tableName
+WHERE columnName BETWEEN value1 AND value2;
+```
+    // When value's data type is an int, [value1, value2], value2 is included;
+       When value's data type is text, [value1, value2), value2 is not included.
+#### 1.4.1.7 AND/OR
+```ruby
+SELECT columnName FROM tableName
+WHERE condition1 AND ondition2;
+```
+```ruby
+SELECT columnName FROM tableName
+WHERE condition1 OR condition2;
+```
+#### 1.4.1.8 ORDER BY
+```ruby
+SELECT columnName FROM tableName
+ORDER BY columnName ASC/DESC;
+```
+    //ASC: A-Z
+      DESC: Z-A
+      Default is ASC.
+#### 1.4.1.9 LIMIT
+```ruby
+SELECT columnName FROM tableName
+LIMIT number;
+```
+    //Set the max number of results
+#### 1.4.1.10 
+```ruby
+SELECT columnName,
+CASE
+WHEN condition1, THEN value1 
+WHEN condition2, THEN value2
+......
+ELSE valueN
+END AS 'newColumnName'
+FROM tableName;
+```
+    //According to conditions, create a new colmun named "newColumnName"
+## 1.5 Add a new column to a table
 ```ruby
 ALTER TABLE tableNmae
 ADD newColumnName DATATYPE;
 ```
-## 1.5 Edit a row in a table
+## 1.6 Edit a row in a table
 ```ruby
 UPDATE tableName
 SET updateColumn = newValue
 WHERE column = value;
 ```
     // WHERE is to locate the row*
-## 1.6 Delete a raw or rows from table
+## 1.7 Delete a raw or rows from table
 ```ruby
 DELETE FROM tableName
 WHERE column IS value;
