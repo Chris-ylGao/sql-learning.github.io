@@ -152,4 +152,68 @@ WHERE column = value;
 DELETE FROM tableName
 WHERE column IS value;
 ```
+# 2. Perfrom calculation in sql
+## 2.1 Count
+    //count the number of rows in a columan
+    //if want to count whole rows in the table, than set columnName as "*"
+```ruby
+SELECT COUNT(columnname)
+FROM tableName
+WHERE condition
+``` 
+## 2.2 SUM
+    //return the sum of all values in a column
+    // if the data type of value is not interger, then return 0.0
+```ruby
+SELECT SUM(columnName)
+FROM tableName;
+```
+## 2.3 MAX/MIN
+    //return the maximum/minimum value of colomn
+```ruby
+SELECT MAX(columnName)
+FROM tableName;
+```
+```ruby
+SELECT MIN(columnName)
+FROM tableName;
+```
+## 2.4 AVG
+    //get average of values of sepcific column
+```ruby
+SELECT AVG(columnName)
+FROM tableName
+```
+## 2.5 ROUND
+    //round the values in the column to the number of decimal places specified by the integer
+```ruby
+SELECT (columnName, integer)
+FROM tableName;
+```
+## 2.6 GROUP BY
+    // The "GROUP BY" statement comes after any "WHERE" statements, but before "ORDER BY" or "LIMIT".
+```ruby
+SELECT columnName1, columnName2, Method()
+FROM tableName
+GROUP BY columnName1;
+```
+    // GROUP BY can use reference number intead of columnName
+```ruby
+SELECT columnName1, columnName2, Method()
+FROM tableName
+GROUP BY 1;
+```
+## 2.7 HAVING
+    // HAVING is similar to WHERE; 
+    // When limiting the values of the individual rows, use WHERE; When limiting the results of a query based on an aggregate property, use HAVING.
+    // "HAVING" statement always comes after "GROUP BY", but before "ORDER BY" and "LIMIT".
+```ruby
+SELECT 
+FROM
+WHERE
+GROUP BY
+HAVING
+ORDER BY
+LIMIT;
+```
 []
